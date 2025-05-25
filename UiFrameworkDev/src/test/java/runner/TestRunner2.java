@@ -30,7 +30,7 @@ import io.cucumber.testng.CucumberOptions;
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"rerun:target/rerun.txt"},
 		monochrome = true,
-		dryRun = false //Cucumber dry run is basically used to compile cucumber feature files and step Definitions. If there is any compilation errors it will show when we use dry run
+		dryRun = true //Cucumber dry run is basically used to compile cucumber feature files and step Definitions. If there is any compilation errors it will show when we use dry run
 				//For example if you want to check whether all feature file steps have corresponding step definitions, you can specify it like this: @CucumberOptions(dryRun=true)		
 				//Note: Dry run mode does not skip the execution of @Before or @After annotations (hooks). 
 		//strict = false,
@@ -40,7 +40,7 @@ import io.cucumber.testng.CucumberOptions;
 		//uuidGenerator=true
 		)
 
-public class TestRunner2 extends AbstractTestNGCucumberTests{ //Running from TestNg
+public class TestRunner2 extends AbstractTestNGCucumberTests{  //Run through testNG
 	
 	//Parallel Execution
 	 @Override
