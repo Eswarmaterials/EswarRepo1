@@ -1,0 +1,130 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 21.679 s <<< FAILURE! - in TestSuite
+runner.TestRunner2.runScenario["Successful Login with Valid Credentials0", "Data Table example"](1)  Time elapsed: 0.25 s  <<< FAILURE!
+io.cucumber.testng.UndefinedStepException: 
+The step 'the user is logged in' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is logged in")
+public void the_user_is_logged_in() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("User enters username as {string} and password as {string}")
+public void user_enters_username_as_and_password_as(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+runner.TestRunner2.runScenario["scenario outline example", "Data Table example"](2)  Time elapsed: 0.012 s  <<< FAILURE!
+io.cucumber.testng.UndefinedStepException: 
+The step 'the user is logged in' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is logged in")
+public void the_user_is_logged_in() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("enter {string} and {string}")
+public void enter_and(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+runner.TestRunner2.runScenario["scenario outline example", "Data Table example"](3)  Time elapsed: 0.009 s  <<< FAILURE!
+io.cucumber.testng.UndefinedStepException: 
+The step 'the user is logged in' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is logged in")
+public void the_user_is_logged_in() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("enter {string} and {string}")
+public void enter_and(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+runner.TestRunner2.runScenario["scenario outline example", "Data Table example"](4)  Time elapsed: 0.009 s  <<< FAILURE!
+io.cucumber.testng.UndefinedStepException: 
+The step 'the user is logged in' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is logged in")
+public void the_user_is_logged_in() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("enter {string} and {string}")
+public void enter_and(String string, String string2) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+runner.TestRunner2.runScenario["Data Table example", "Data Table example"](5)  Time elapsed: 0.009 s  <<< FAILURE!
+io.cucumber.testng.UndefinedStepException: 
+The step 'the user is logged in' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is logged in")
+public void the_user_is_logged_in() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("Data table example as List9")
+public void data_table_example_as_list9(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+
+
+runner.TestRunner2.runScenario["Data Table example", "Data Table example"](6)  Time elapsed: 0.008 s  <<< FAILURE!
+io.cucumber.testng.UndefinedStepException: 
+The step 'the user is logged in' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("the user is logged in")
+public void the_user_is_logged_in() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("Data table example as Map")
+public void data_table_example_as_map(io.cucumber.datatable.DataTable dataTable) {
+    // Write code here that turns the phrase above into concrete actions
+    // For automatic transformation, change DataTable to one of
+    // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+    // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+    // Double, Byte, Short, Long, BigInteger or BigDecimal.
+    //
+    // For other transformations you can register a DataTableType.
+    throw new io.cucumber.java.PendingException();
+}
+
+
+runner.TestRunner2.runScenario["successful Login with valid Credentials", "Login Action"](7)  Time elapsed: 15.481 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@name='password1']"}
+  (Session info: chrome=136.0.7103.93)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3dc7d50a3ce704ed053a3902c2ff0806, findElement {value=//*[@name='password1'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 136.0.7103.93, chrome: {chromedriverVersion: 136.0.7103.92 (cb81a4cc5087..., userDataDir: C:\Users\Geethu\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51412}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51412/devtoo..., se:cdpVersion: 136.0.7103.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3dc7d50a3ce704ed053a3902c2ff0806
+
