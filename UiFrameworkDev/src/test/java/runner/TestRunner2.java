@@ -40,7 +40,7 @@ import io.cucumber.testng.CucumberOptions;
 		//uuidGenerator=true
 		)
 
-public class TestRunner2 extends AbstractTestNGCucumberTests{ //Running from TestNg
+public class TestRunner2 extends AbstractTestNGCucumberTests{  //Run through testNG
 	
 	//Parallel Execution
 	 @Override
