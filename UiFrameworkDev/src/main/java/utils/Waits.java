@@ -20,7 +20,9 @@ public class Waits extends BaseTest{
 		FluentWait<WebDriver> wait = new WebDriverWait(driver,Duration.ofMillis(1000))
 				.withTimeout(Duration.ofMillis(1000))          
 				.pollingEvery(Duration.ofMillis(1000))          
-				.ignoring(NoSuchElementException.class);  
+				.ignoring(NoSuchElementException.class)
+				//.ignoreAll(null)
+				.withMessage(testcasename);
 	
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(element));		
 	}

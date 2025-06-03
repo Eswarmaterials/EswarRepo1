@@ -3,11 +3,13 @@ package core;
 import java.io.IOException;
 import java.time.Duration;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.BeforeSuite;
 import org.testng.asserts.SoftAssert;
 
 import config.ConfigFileReader;
@@ -20,12 +22,15 @@ public class BaseTest {
 	SoftAssert softAssert= new SoftAssert();
 	
 	public static Wait<WebDriver> wait;
+	
+	public static JavascriptExecutor js;
 
 	protected static String testcasename;
 	
 	ConfigFileReader config=new ConfigFileReader();
 
-	public static void createDriver() throws Exception {
+	@BeforeSuite
+	public static WebDriver createDriver() throws Exception {
 		
 		if(driver==null){
 			ConfigFileReader config=new ConfigFileReader();
@@ -39,15 +44,38 @@ public class BaseTest {
 			     ChromeOptions options = new ChromeOptions();
 			     options.addArguments("--remote-allow-origins=*");
 			     //options.addArguments("--headless");  // Run in headless mode (optional)
+			     //options.addArguments("--start-maximized");
+			     
+			     //How to handle Chrome's change password popup in Selenium
+			     //To handle Chrome's "Save password" or "Change password" popup in Selenium with Java, you must disable the Chrome password manager, because these are browser-level popups and not part of the HTML DOM, so Selenium cannot interact with them directly.
+			     
+			         //Solution:Recommended Approach: Disable the Popup or Disable Chrome password manager
+			       /** 
+			        Map<String, Object> prefs = new HashMap<>();
+			        prefs.put("credentials_enable_service", false);
+			        prefs.put("profile.password_manager_enabled", false);
+
+			        ChromeOptions options = new ChromeOptions();
+			        options.setExperimentalOption("prefs", prefs);
+			        
+			        "credentials_enable_service": false disables Chrome's credential saving service.
+
+					"profile.password_manager_enabled": false disables the password manager.
+			        
+			        */
 			     
 		         driver = new ChromeDriver();
 		         driver.manage().window().maximize();
 		         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		         wait= new WebDriverWait(driver,Duration.ofSeconds(15));
 		         
-		         driver.get("https://www.tutorialspoint.com/selenium/practice/login.php");	           
+		         js = (JavascriptExecutor) driver;
+		         
+		         driver.get("https://www.tutorialspoint.com/selenium/practice/login.php");		        
 			}
 		}	
+		
+		 return driver;
 	}
 	
 	public static void closeDriver() throws IOException {

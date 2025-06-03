@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri May 23 16:14:19 IST 2025</td>
+<td>Started on:</td><td>Tue Jun 03 06:24:25 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1385 ms)</td>
+<tr><td>Total time:</td><td>6 seconds (6161 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,36 +77,103 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='runner.TestRunner2.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Title Scenario", "Verify"</td>
-<td><div><pre>java.lang.Error: Unresolved compilation problems: 
-	Time cannot be resolved to a type
-	Syntax error on token &quot;.&quot;, class expected after this token
+<td><div><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Verify Title&apos; is undefined.
+You can implement this step using the snippet(s) below:
 
-	at utils.Hoo123.embedScreenshot(Hoo123.java:62)
-</pre></div><a href='#' onClick='toggleBox("stack-trace83805416", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace83805416'><pre>java.lang.Error: Unresolved compilation problems: 
-	Time cannot be resolved to a type
-	Syntax error on token &quot;.&quot;, class expected after this token
+@Given(&quot;Verify Title&quot;)
+public void verify_title() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
 
-	at utils.Hoo123.embedScreenshot(Hoo123.java:62)
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:136)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1465610367", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1465610367'><pre>io.cucumber.testng.UndefinedStepException: The step &apos;Verify Title&apos; is undefined.
+You can implement this step using the snippet(s) below:
+
+@Given(&quot;Verify Title&quot;)
+public void verify_title() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+	at io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
+	at io.cucumber.testng.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:23)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:136)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:136)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:136)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:132)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:81)
+	at org.testng.internal.thread.Async$AsyncTask.run(Async.java:34)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
 </pre></div></td>
 <td>0</td>
-<td>runner.TestRunner2@548e6d58</td></tr>
+<td>runner.TestRunner2@574b560f</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
-<td title='runner.TestRunner2.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Header Scenario", "Verify"</td>
-<td><div><pre>java.lang.Error: Unresolved compilation problems: 
-	Time cannot be resolved to a type
-	Syntax error on token &quot;.&quot;, class expected after this token
-
-	at utils.Hoo123.embedScreenshot(Hoo123.java:62)
-</pre></div><a href='#' onClick='toggleBox("stack-trace599581162", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace599581162'><pre>java.lang.Error: Unresolved compilation problems: 
-	Time cannot be resolved to a type
-	Syntax error on token &quot;.&quot;, class expected after this token
-
-	at utils.Hoo123.embedScreenshot(Hoo123.java:62)
-</pre></div></td>
+<td title='runner.TestRunner2.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "scenario outline example", "Data Table example"</td>
+<td></td>
 <td>0</td>
-<td>runner.TestRunner2@548e6d58</td></tr>
+<td>runner.TestRunner2@574b560f</td></tr>
+<tr>
+<td title='runner.TestRunner2.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "scenario outline example", "Data Table example"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner2@574b560f</td></tr>
+<tr>
+<td title='runner.TestRunner2.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Data Table example", "Data Table example"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner2@574b560f</td></tr>
+<tr>
+<td title='runner.TestRunner2.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "scenario outline example", "Data Table example"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner2@574b560f</td></tr>
+<tr>
+<td title='runner.TestRunner2.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful Login with Valid Credentials", "Data Table example"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner2@574b560f</td></tr>
+<tr>
+<td title='runner.TestRunner2.runScenario()'><b>runScenario</b><br>Test class: runner.TestRunner2<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Data Table example", "Data Table example"</td>
+<td></td>
+<td>0</td>
+<td>runner.TestRunner2@574b560f</td></tr>
 </table><p>
 </body>
 </html>
